@@ -1,0 +1,10 @@
+/* Add custom css here */
+
+.jumbo-image{
+    background-image: url("../img/event.jpg"); 
+    background-size:cover;
+}
+
+/* .officers .card-img-top{
+    height: 19rem;
+} */
