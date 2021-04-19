@@ -1,9 +1,14 @@
 {{ partial "header.html" . }}
 
 
-<h1 class="display-1">Unity Kitchen Sink Page</h1>
+<h1 class="display-1">{{ .Title }}</h1>
 
 <!-- Bootstrap 4 HTML Component©çs -->
+
+{{ with .Content }}
+{{- . -}}
+{{ else }}
+
 <section id="bootstrap-components">
     <div>
         <div class="container">
@@ -636,5 +641,6 @@
 </section>
 </div>
 
+{{ end }}
 
 {{ partial "footer.html" . }}

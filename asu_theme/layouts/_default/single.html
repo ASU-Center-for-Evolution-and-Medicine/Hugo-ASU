@@ -1,0 +1,7 @@
+{{ partial "header.html" . }}
+
+<h1 class="display-1">{{ .Title }}</h1>
+<div id="{{ .Title | urlize }}">
+{{ .Content }}
+</div>
+{{ partial "footer.html" . }}
