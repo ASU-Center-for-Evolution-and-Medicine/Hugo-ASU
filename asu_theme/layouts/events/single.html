@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+<h1 class="display-1">{{ .Title }}</h1>
+
+<section>
+    <div class="jumbotron jumbotron-fluid jumbo-image text-light">
+        <div class="container">
+            <h1>Event</h1>
+        </div>
+    </div>
+</section>
+<div id="{{ .Title | urlize }}">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>{{ .Title }}</h2>
+                    {{ .Content }}
+                </div>
+                <div class="col-md-4">
+                    <div class="jumbotron pt-1">
+                        <h3>Host</h3>
+                        <p>{{ .Params.host }}</br>{{ .Params.aff }}</p>
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td class="text-right"><i class="far fa-calendar-alt"></i></td>
+                                    <td>{{ dateFormat "Jan 2, 2006" .Params.event_date }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right"><i class="fas fa-map"></i></td>
+                                    <td>{{ .Params.location }}</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+{{ partial "footer.html" . }}

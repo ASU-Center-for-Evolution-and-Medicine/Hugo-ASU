@@ -1,0 +1,23 @@
+<div class="col-md-4 col-sm-6 col-12 mb-4">
+    <div class="card shadow">
+        <div class="card-body">
+            <a href="{{ .Permalink }}">
+                <h4 class="card-title">{{ .Params.title }}</h4>
+            </a>
+
+
+            <p class="card-text">
+                <b>{{ .Params.host }}</b></br>
+                {{ .Params.aff }}
+            </p>
+        </div>
+        <div class="card-footer text-muted pb-1">
+            <div class="badges mb-2">
+                <span class="badge badge-light m-0">Luncheon</span>
+            </div>
+            <div class="card-date">
+                {{ dateFormat "Jan 2, 2006" .Params.event_date }}
+            </div>
+        </div>
+    </div>
+</div>

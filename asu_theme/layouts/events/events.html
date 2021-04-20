@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+
+<h1 class="display-1">{{ .Title }}</h1>
+
+<!-- Bootstrap 4 HTML Component©çs -->
+
+<section>
+    <div class="jumbotron jumbotron-fluid jumbo-image text-light">
+        <div class="container">
+            <h1>Events</h1>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+                {{ range sort (where .Site.Pages "Type" "events") ".Params.event_date" "desc" }} 
+                    {{ if gt (len .Content) 0 }} 
+                        {{ .Render "card" }} 
+                    {{ end }} 
+                {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,20 @@
+    
+    {{ $awardees := index .Site.Data (.Get 0) }}
+
+    {{ $years := slice }}
+    {{ range sort $awardees.recipients "year" "desc" }}
+    {{ $years = append .year $years }}
+    {{ end }}
+
+    {{ $years = $years | uniq }}
+    {{ $sorted := sort $awardees.recipients "year" "desc" }}
+    
+    {{ range $years }}
+        <h3>{{ . }}</h3>
+        <ul>
+        {{ range where $sorted "year" . }}
+            <li><b>{{ .name }}</b> - {{ .std_type }}</li>
+        {{ end }}
+        </ul>
+    {{ end }}
+
