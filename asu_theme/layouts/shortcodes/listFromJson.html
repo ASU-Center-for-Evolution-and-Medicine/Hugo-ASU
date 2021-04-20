@@ -1,4 +1,3 @@
-    
     {{ $awardees := index .Site.Data (.Get 0) }}
 
     {{ $years := slice }}
@@ -8,13 +7,28 @@
 
     {{ $years = $years | uniq }}
     {{ $sorted := sort $awardees.recipients "year" "desc" }}
-    
-    {{ range $years }}
-        <h3>{{ . }}</h3>
-        <ul>
-        {{ range where $sorted "year" . }}
-            <li><b>{{ .name }}</b> - {{ .std_type }}</li>
-        {{ end }}
-        </ul>
-    {{ end }}
 
+    {{ range $years }}
+    <h2>{{ . }}</h2>
+    <table class="table table-striped table-hover table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Advisor</th>
+                <th scope="col">Affiliation</th>
+                <th scope="col">Research</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {{ range where $sorted "year" . }}
+                <th scope="row">{{ .name }}</th>
+                <td>{{ .advisor.name }}</td>
+                <td>{{ .advisor.affil }}</td>
+                <td>{{ .award }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+    <hr>
+    {{ end }}
