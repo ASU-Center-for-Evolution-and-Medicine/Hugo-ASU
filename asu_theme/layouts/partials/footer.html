@@ -85,16 +85,13 @@ crossorigin="anonymous"></script>
             baseUrl: "/"
         };
 
-        console.log(componentsLibrary, 'componentsLibrary');
-
         //window.setTimeout(function () {
         componentsLibrary.initHeader(props, "headerContainer");
         // }, 10 * 1000);
 
         // Initialize cookie consent banner
         AsuCookieConsent.init();
-
-        console.log(componentForms, 'componentForms');
+        
         /** Form Component testProps **/
         const testProps = {
             title: "Daily Health Check Reminders",

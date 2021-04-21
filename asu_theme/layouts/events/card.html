@@ -13,10 +13,12 @@
         </div>
         <div class="card-footer text-muted pb-1">
             <div class="badges mb-2">
-                <span class="badge badge-light m-0">Luncheon</span>
+                    {{ range .Params.tag }}
+                        <span class="badge badge-light m-0">{{ . }}</span>
+                    {{ end }}
             </div>
             <div class="card-date">
-                {{ dateFormat "Jan 2, 2006" .Params.event_date }}
+                {{ dateFormat "Jan 2, 2006" .Params.date }}
             </div>
         </div>
     </div>

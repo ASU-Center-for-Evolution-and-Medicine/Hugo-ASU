@@ -1,9 +1,9 @@
 {{ partial "header.html" . }}
 
-<h1 class="display-1">{{ .Title }}</h1>
+<h1 class="display-1">Event - </h1>
 
 <section>
-    <div class="jumbotron jumbotron-fluid jumbo-image text-light">
+    <div class="jumbotron jumbotron-fluid jumbo-image text-light jumbo-events">
         <div class="container">
             <h1>Event</h1>
         </div>
@@ -25,15 +25,20 @@
                             <tbody>
                                 <tr>
                                     <td class="text-right"><i class="far fa-calendar-alt"></i></td>
-                                    <td>{{ dateFormat "Jan 2, 2006" .Params.event_date }}</td>
+                                    <td>{{ dateFormat "Jan 2, 2006" .Params.date }}</td>
                                 </tr>
                                 <tr>
                                     <td class="text-right"><i class="fas fa-map"></i></td>
                                     <td>{{ .Params.location }}</td>
                                 </tr>
                             </tbody>
-                          </table>
-                      </div>
+                        </table>
+                        <div class="badges">
+                            {{ range .Params.tag }}
+                            <span class="badge badge-dark m-0">{{ . }}</span>
+                            {{ end }}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
