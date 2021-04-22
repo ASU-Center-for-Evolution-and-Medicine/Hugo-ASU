@@ -1,4 +1,4 @@
-# ASU WS2.0 theme for HuGo
+# ASU WS2.0 theme for Hugo
 [Hugo](https://gohugo.io/) is a static website generator with functionality somewhere between manually editing HTMLs and Jekyll. It implements atomic design methodology using blocks, partials, shortcodes and automatically generates sitemaps. Since SSGs don't rely on PHP or any backend DBs they are balazingly fast and cut down hosting costs, a good fit for faculty, lab or a project website. 
 
  Hugo is relatively easy to setup and does not have any dependencies, ideal for the programmer who infrequently develops websites. While more advanced features can be emulated in Hugo, it is not meant to replace a typical CMS.
