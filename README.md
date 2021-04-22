@@ -3,14 +3,18 @@
 
  Hugo is relatively easy to setup and does not have any dependencies, ideal for the programmer who infrequently develops websites. While more advanced features can be emulated in Hugo, it is not meant to replace a typical CMS.
 
- Live example of this theme on [Sigma Xi website](http://sigmaxi.asu.edu)
+ Live example of this theme on [SigmaXi website](http://sigmaxi.asu.edu)
  
  
  ![SigmaXi Website](img/sigmaxi.png)
  **SigmaXi website screenshot**
 
-## How to use this theme
+## When should I use this theme? 
+The Hugo framework is for everyone requires prior knowledge GoLang, package managers or terminal. Knowing HTML, CSS and Markdown helps but is not required and can be offset by patience or curiosity. If you're setting up a new website, here is a decision tree to help you decide on the framework. 
 
+![Website decision tree](img/framework_decision_tree.png)
+
+## How to use this theme
 ### Setting up
 1. Install Hugo and setup a website ([Official guide](https://gohugo.io/getting-started/quick-start/))
 2. Download this theme and put `asu_theme` in the `themes` folder of your site.
