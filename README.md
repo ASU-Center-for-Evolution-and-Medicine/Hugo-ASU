@@ -1,12 +1,17 @@
 # ASU WS2.0 theme for HuGo
 [Hugo](https://gohugo.io/) is a static website generator with functionality somewhere between manually editing HTMLs and Jekyll. It implements atomic design methodology using blocks, partials, shortcodes and automatically generates sitemaps. Since SSGs don't rely on PHP or any backend DBs they are balazingly fast and cut down hosting costs, a good fit for faculty, lab or a project website. 
 
- Hugo is relatively easy to setup and does not have any dependencies, ideal for the programmer who infrequently develops websites. While more advanced features can be emulated in Hugo, it is not meant to replace a typical CMS. 
+ Hugo is relatively easy to setup and does not have any dependencies, ideal for the programmer who infrequently develops websites. While more advanced features can be emulated in Hugo, it is not meant to replace a typical CMS.
+
+ Live example of this theme on [Sigma Xi website](http://sigmaxi.asu.edu)
+ 
+ 
+ ![SigmaXi Website](img/sigmaxi.png)
+ **SigmaXi website screenshot**
 
 ## How to use this theme
 
 ### Setting up
-
 1. Install Hugo and setup a website ([Official guide](https://gohugo.io/getting-started/quick-start/))
 2. Download this theme and put `asu_theme` in the `themes` folder of your site.
 3. Edit `config.*` and change the theme to `asu_themes`. With `config.toml` it will look like this `theme = "asu_theme"`. Change the site title to match your department.
@@ -69,7 +74,7 @@ This shortcode reads a list of award recipients from a JSON file, groups them by
     ]
 }
 ```
-To visuable this JSON file as a table use the shortcode `{{< listFromJson "awardees" >}}` to pass the JSON file `awardees.json` to the shortcode. The output will look something like this: ![Table output](img/table_output.png)
+To render this JSON file as a table use the shortcode `{{< listFromJson "awardees" >}}` to pass the JSON file `awardees.json` to the shortcode. The output will look something like this: ![Table output](img/table_output.png)
 
 #### newMembers.html - /themes/asu_theme/layouts/shortcodes/newMembers.html
 This is an example of a static html content block that can be used to produce reusable content blocks on multiple pages. Use the shortcode `{{< newMembers >}}` to put it anywhere on your pages.
