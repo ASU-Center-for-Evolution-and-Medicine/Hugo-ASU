@@ -5,7 +5,6 @@
 
  Live example of this theme on [SigmaXi website](http://sigmaxi.asu.edu)
  
- 
  ![SigmaXi Website](img/sigmaxi.png)
  **SigmaXi website screenshot**
 
@@ -85,3 +84,7 @@ This is an example of a static html content block that can be used to produce re
 
 #### rawhtml.html - /themes/asu_theme/layouts/shortcodes/rawhtml.html
 This shortcode takes in any html and renders it as HTML instead of text. It is useful if you want to use HTML within your markdown content file. Implemented from [Anaulin's Blog](https://anaulin.org/blog/hugo-raw-html-shortcode/).
+
+## Credit
+The theme is created and mainted by the [Center of Evolution and Medicine](https://evmed.asu.edu/).
+![EvMedLogo](img/evmed_logo.png)
